@@ -67,10 +67,10 @@ Access the specific exercises via your browser using the following URL pattern:
 <summary>Click to view Chapter 3 Demo</summary>
 
 > *Login Form Interface:*
-> ![Login Form](./path-to-images/login_preview.png)
+> ![Login Form](./image/login_form.png)
 >
 > *Welcome Page (Session Active):*
-> ![Welcome Page](./path-to-images/welcome_preview.png)
+> ![Welcome Page](./image/welcome_form.png)
 
 </details>
 
