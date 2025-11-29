@@ -6,11 +6,11 @@ CREATE TABLE IF NOT EXISTS hoa (
                                    id INT AUTO_INCREMENT PRIMARY KEY,
                                    ten_hoa VARCHAR(255) NOT NULL,
     mo_ta TEXT,
-    hinh_anh VARCHAR(255) NOT NULL,
+    hinh_anh VARCHAR(500) NOT NULL,
     ngay_tao TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Chèn dữ liệu mẫu
+-- Chèn dữ liệu mẫu với tên file ảnh local
 INSERT INTO hoa (ten_hoa, mo_ta, hinh_anh) VALUES
                                                ('Dạ yên thảo', 'Dạ yên thảo là lựa chọn thích hợp cho những ai yêu thích trồng hoa làm đẹp nhà ở. Hoa có thể nở rực quanh năm, kể cả tiết trời se lạnh của mùa xuân. Dạ yên thảo được trồng ở chậu treo nơi cửa sổ, ban công. Cây ra hoa quanh năm, hoa to, nhiều màu như trắng, xanh, tím, đỏ, hồng, …', 'da-yen-thao.jpg'),
                                                ('Đồng tiền', 'Đồng tiền thích hợp để trồng trong mùa xuân và đầu mùa hè, khi mà cường độ ánh sáng chưa quá mạnh. Cây trồng trong chậu treo, dáng hoa nhỏ, nhiều màu sắc. Hoa có màu vàng, cam, đỏ, phớt hồng,..', 'dong-tien.jpg'),

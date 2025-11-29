@@ -1,133 +1,49 @@
 <?php
-$csvFile = '65HTTT_Danh_sach_diem_danh.csv';
-$data = [];
+require_once 'config/database.php';
 
-if (file_exists($csvFile)) {
-    $file = fopen($csvFile, 'r');
-    $headers = fgetcsv($file, 0, ',', '"', '');
+$database = new Database();
+$conn = $database->getConnection();
 
-    while (($row = fgetcsv($file, 0, ',', '"', '')) !== false) {
-        $data[] = $row;
-    }
-
-    fclose($file);
-}
+$stmt = $conn->query("SELECT * FROM students ORDER BY id");
+$students = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
-
 <!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Danh Sách Điểm Danh</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            padding: 20px;
-            background-color: #f5f5f5;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        h1 {
-            color: #333;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        .stats {
-            margin-bottom: 20px;
-            padding: 10px;
-            background: #e3f2fd;
-            border-radius: 4px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        th, td {
-            padding: 12px;
-            text-align: left;
-            border: 1px solid #ddd;
-        }
-
-        th {
-            background-color: #2196F3;
-            color: white;
-            font-weight: bold;
-        }
-
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-
-        tr:hover {
-            background-color: #f0f0f0;
-        }
-
-        .no-data {
-            text-align: center;
-            padding: 20px;
-            color: #999;
-        }
-    </style>
+    <title>Danh Sách Sinh Viên</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<div class="container">
-    <h1>Danh Sách Điểm Danh Lớp 65HTTT</h1>
-
-    <?php if (!empty($data)): ?>
-        <div class="stats">
-            <strong>Tổng số sinh viên:</strong> <?= count($data) ?>
-        </div>
-
-        <table>
-            <thead>
+<div class="container mt-5">
+    <h1>Danh Sách Sinh Viên</h1>
+    <div class="text-end mb-3">
+        <a href="upload.php" class="btn btn-primary">Upload CSV</a>
+    </div>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Username</th>
+            <th>Họ</th>
+            <th>Tên</th>
+            <th>Thành phố</th>
+            <th>Email</th>
+            <th>Khóa học</th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php foreach ($students as $student): ?>
             <tr>
-                <th>STT</th>
-                <th>Username</th>
-                <th>Password</th>
-                <th>Họ</th>
-                <th>Tên</th>
-                <th>Lớp</th>
-                <th>Email</th>
-                <th>Khóa học</th>
+                <td><?php echo htmlspecialchars($student['username']); ?></td>
+                <td><?php echo htmlspecialchars($student['lastname']); ?></td>
+                <td><?php echo htmlspecialchars($student['firstname']); ?></td>
+                <td><?php echo htmlspecialchars($student['city']); ?></td>
+                <td><?php echo htmlspecialchars($student['email']); ?></td>
+                <td><?php echo htmlspecialchars($student['course']); ?></td>
             </tr>
-            </thead>
-            <tbody>
-            <?php foreach ($data as $index => $row): ?>
-                <tr>
-                    <td><?= $index + 1 ?></td>
-                    <td><?= htmlspecialchars($row[0]) ?></td>
-                    <td><?= htmlspecialchars($row[1]) ?></td>
-                    <td><?= htmlspecialchars($row[2]) ?></td>
-                    <td><?= htmlspecialchars($row[3]) ?></td>
-                    <td><?= htmlspecialchars($row[4]) ?></td>
-                    <td><?= htmlspecialchars($row[5]) ?></td>
-                    <td><?= htmlspecialchars($row[6]) ?></td>
-                </tr>
-            <?php endforeach; ?>
-            </tbody>
-        </table>
-    <?php else: ?>
-        <div class="no-data">Không có dữ liệu hoặc file không tồn tại</div>
-    <?php endif; ?>
+        <?php endforeach; ?>
+        </tbody>
+    </table>
 </div>
 </body>
 </html>

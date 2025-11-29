@@ -1,0 +1,14 @@
+
+Jetpack Compose là gì?
+A. Một toolkit để xây dựng giao diện người dùng theo hướng khai báo.
+B. Một ngôn ngữ lập trình.
+C. Một framework.
+D. Một IDE.
+ANSWER: A
+
+Những thành phần nào sau đây có thể được sử dụng để hiển thị danh sách trong Android? (Chọn 2 đáp án)
+A. TextView
+B. ListView
+C. ImageView
+D. RecyclerView
+ANSWER: B, D
