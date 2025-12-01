@@ -27,10 +27,17 @@ Repository này được sử dụng để lưu trữ và nộp các bài tập 
 ```
 CNWeb/
 ├── PHIEU_HOC_TAP/          # Phiếu học tập
-│   ├── pht_chuong1. pdf     # Chương 1: Tổng quan Web
+│   ├── pht_chuong1.pdf     # Chương 1: Tổng quan Web
 │   ├── pht_chuong2/        # Chương 2: Cơ bản PHP
 │   ├── pht_chuong3/        # Chương 3: Trang Web động
 │   ├── pht_chuong4/        # Chương 4: Tích hợp CSDL
+│   ├── pht_chuong5/        # Chương 5: Mô hình MVC
+│   │   └── code/
+│   │       ├── index.php
+│   │       ├── models/
+│   │       │   └── SinhVienModel.php
+│   │       └── views/
+│   │           └── sinhvien_view.php
 │   └── image/              # Ảnh minh họa
 ├── BT_LOP/                 # Bài tập trên lớp
 │   └── test_gia_lap_csdl/  # Bài kiểm tra giả lập CSDL
@@ -47,6 +54,7 @@ CNWeb/
 | **Chương 2** | Cơ bản PHP | Cú pháp, Biến, Kiểu dữ liệu, Mảng, Cấu trúc điều khiển, Hàm | ✅ Hoàn thành |
 | **Chương 3** | Trang Web động | Xử lý Form (`$_POST`/`$_GET`), Quản lý trạng thái (`$_SESSION`, Cookies) | ✅ Hoàn thành |
 | **Chương 4** | Tích hợp CSDL | MySQL, PDO, Thao tác CRUD, Kết nối Database | ✅ Hoàn thành |
+| **Chương 5** | Mô hình MVC | Model-View-Controller, Tách biệt logic, Quản lý Sinh viên | ✅ Hoàn thành |
 
 ---
 
@@ -72,7 +80,7 @@ CNWeb/
 3.  **Khởi động Server:**
 - Mở XAMPP/Laragon Control Panel
 - Khởi động **Apache**
-- Khởi động **MySQL** (cho các bài tập Chương 4)
+- Khởi động **MySQL** (cho các bài tập Chương 4, 5)
 
 ---
 
@@ -86,6 +94,7 @@ Truy cập các bài tập qua trình duyệt với đường dẫn:
 - **Phiếu học tập Chương 2:** `http://localhost/CNWeb/PHIEU_HOC_TAP/pht_chuong2/index.php`
 - **Phiếu học tập Chương 3:** `http://localhost/CNWeb/PHIEU_HOC_TAP/pht_chuong3/login.html`
 - **Phiếu học tập Chương 4:** `http://localhost/CNWeb/PHIEU_HOC_TAP/pht_chuong4/index.php`
+- **Phiếu học tập Chương 5:** `http://localhost/CNWeb/PHIEU_HOC_TAP/pht_chuong5/code/index.php`
 - **Bài tập lớp:** `http://localhost/CNWeb/BT_LOP/test_gia_lap_csdl/index.php`
 
 ---
@@ -119,6 +128,14 @@ Truy cập các bài tập qua trình duyệt với đường dẫn:
 >
 > **CSDL:**
 > ![CSDL](./PHIEU_HOC_TAP/image/demo-csdl.png)
+
+</details>
+
+<details>
+<summary>📌 Demo Chương 5</summary>
+
+> **Quản lý Sinh viên (MVC):**
+> ![MVC Demo](./PHIEU_HOC_TAP/image/chuong5_demo.png)
 
 </details>
 
