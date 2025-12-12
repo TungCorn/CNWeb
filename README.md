@@ -36,7 +36,8 @@ CNWeb/
 │   └── image/                  # Ảnh minh họa
 │
 ├── BT_LOP/                     # Bài tập trên lớp
-│   └── test_gia_lap_csdl/      # Bài kiểm tra giả lập CSDL
+│   ├── test_gia_lap_csdl/      # Bài kiểm tra giả lập CSDL
+│   └── lr-project/             # Bài 6. Laravel Framework
 │
 ├── ThucHanh/                   # 📌 Bài thực hành trên lớp
 │   ├── BTTH_1/                 # Thực hành 1: Cơ bản PHP
@@ -46,13 +47,6 @@ CNWeb/
 │   │   └── B4/                 # Bài 4: Dự án hoàn chỉnh
 │   │
 │   ├── BTTH_2_Nhom/            # 🎓 Thực hành 2 (Nhóm): Hệ thống Quản lý Khóa học Online
-│   │   ├── controllers/        # Controllers (MVC)
-│   │   ├── models/             # Models (User, Course, Lesson, Enrollment...)
-│   │   ├── views/              # Views (Blade-like templates)
-│   │   ├── viewmodels/         # ViewModels (Validation, Data binding)
-│   │   ├── lib/                # Thư viện tiện ích (Router, Database, Auth...)
-│   │   ├── config/             # Cấu hình Database, App
-│   │   └── assets/             # CSS, JS, Uploads
 │   │
 │   └── BTTH_3/                 # 🚀 Thực hành 3: Laravel Framework
 │       └── PRAC_01/            # Hệ thống quản lý Thuốc (Medicine)
@@ -83,6 +77,7 @@ CNWeb/
 | Thư mục | Mô tả |
 |:---|:---|
 | `test_gia_lap_csdl` | Bài kiểm tra giả lập cơ sở dữ liệu |
+| `lr-project` | Bài 6. Laravel Framework |
 
 ---
 
@@ -189,6 +184,7 @@ Truy cập các bài tập qua trình duyệt với đường dẫn:
 
 📝 **Bài tập lớp:**
 - **Test CSDL:** `http://localhost/CNWeb/BT_LOP/test_gia_lap_csdl/index.php`
+- **Laravel Project:** `http://localhost/CNWeb/BT_LOP/lr-project/public/`
 
 💻 **Bài thực hành:**
 - **BTTH_1:** `http://localhost/CNWeb/ThucHanh/BTTH_1/B1/index.php`
