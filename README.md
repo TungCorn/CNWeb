@@ -32,6 +32,7 @@ CNWeb/
 │   ├── pht_chuong3/            # Chương 3: Trang Web động
 │   ├── pht_chuong4/            # Chương 4: Tích hợp CSDL
 │   ├── pht_chuong5/            # Chương 5: Mô hình MVC
+│   ├── pht_chuong6/            # Chương 6: Laravel Framework
 │   └── image/                  # Ảnh minh họa
 │
 ├── BT_LOP/                     # Bài tập trên lớp
@@ -73,6 +74,7 @@ CNWeb/
 | **Chương 3** | Trang Web động | Xử lý Form (`$_POST`/`$_GET`), Quản lý trạng thái (`$_SESSION`, Cookies) | ✅ Hoàn thành |
 | **Chương 4** | Tích hợp CSDL | MySQL, PDO, Thao tác CRUD, Kết nối Database | ✅ Hoàn thành |
 | **Chương 5** | Mô hình MVC | Model-View-Controller, Tách biệt logic, Quản lý Sinh viên | ✅ Hoàn thành |
+| **Chương 6** | Laravel Framework | Cài đặt Laravel, Routing, Controllers | ✅ Hoàn thành |
 
 ---
 
@@ -183,6 +185,7 @@ Truy cập các bài tập qua trình duyệt với đường dẫn:
 - **Chương 3:** `http://localhost/CNWeb/PHIEU_HOC_TAP/pht_chuong3/login.html`
 - **Chương 4:** `http://localhost/CNWeb/PHIEU_HOC_TAP/pht_chuong4/index.php`
 - **Chương 5:** `http://localhost/CNWeb/PHIEU_HOC_TAP/pht_chuong5/code/index.php`
+- **Chương 6:** `http://localhost/CNWeb/PHIEU_HOC_TAP/pht_chuong6/code/web.php`
 
 📝 **Bài tập lớp:**
 - **Test CSDL:** `http://localhost/CNWeb/BT_LOP/test_gia_lap_csdl/index.php`
@@ -235,6 +238,14 @@ Truy cập các bài tập qua trình duyệt với đường dẫn:
 
 > **Quản lý Sinh viên (MVC):**
 > ![MVC Demo](./PHIEU_HOC_TAP/image/chuong5_form.png)
+
+</details>
+
+<details>
+<summary>📌 Demo Chương 6</summary>
+
+> **GIỚI THIỆU VỀ LARAVEL:**
+> ![Laravel](./PHIEU_HOC_TAP/image/chuong6.png)
 
 </details>
 
